@@ -1,0 +1,11 @@
+Given a sorted array of integers, implement a function that returns the median of the array.
+fn find_median(sorted_vec: &[i32]) -> f32 {
+    let len = sorted_vec.len();
+    let mid = len / 2;
+    if len % 2 == 0 {
+        (sorted_vec[mid - 1] as f32 + sorted_vec[mid] as f32) / 2.0
+    } else {
+        sorted_vec[mid] as f32
+    }
+}
+
